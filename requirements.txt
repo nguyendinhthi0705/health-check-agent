@@ -1,4 +1,6 @@
 py-healthcheck
 Flask
 psutil
-emails
+mysql-connector-python
+schedule
+python-dotenv 
