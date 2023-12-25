@@ -2,6 +2,7 @@ import schedule
 import time
 import health_check as glib
 import os
+import subprocess
 
 
 def run_manual():
@@ -12,6 +13,7 @@ def run_manual():
     if not result:
       glib.print_with_time("Check fail: " + msg)
       glib.print_with_time("Trigger fail actions")
+      subprocess.call(['sh','./actions.sh'])
       glib.print_with_time("Stop the check")
       break
     else:

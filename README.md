@@ -14,6 +14,7 @@ This is simple app to health check local server via Cron job or API.
 ## Update Configuration:
  Edit file .env for mysql connection, default CHECK_FREQUENCY is 1 or 1 minute
 ## Start Cron Job Check and Trigger Action Then Stop the App
+To Add your own shell script action just update file actions.sh 
 > python run_manual.py
 
 ## Start Web API
