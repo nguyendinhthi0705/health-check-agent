@@ -13,7 +13,10 @@ def run_manual():
     if not result:
       glib.print_with_time("Check fail: " + msg)
       glib.print_with_time("Trigger fail actions")
-      subprocess.call(['sh','./actions.sh'])
+      if(os.environ.get('OS')=="Linux"):
+        subprocess.call(['sh','./actions.sh'])
+      else:
+        subprocess.Popen(['powershell.exe','./actions.ps1'])
       glib.print_with_time("Stop the check")
       break
     else:
